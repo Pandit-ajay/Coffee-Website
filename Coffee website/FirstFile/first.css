@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    columns: #FBFBFB;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 20px 10%; */
+    background: transparent;
+    display: flex;
+    /* ustify-content: space-between; */
+    align-items: center;
+    z-index: 100; 
+    /* background: #4B164C;
+    border-bottom:2px solid #ededed; */
+} 
+
+.logo {
+    padding-top: 2rem;
+    padding-left: -2rem;
+}
+
+.logo img {
+    height: 4rem;
+}
+
+.navbar {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 12vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navlist {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: #FBFBFB;
+    font-size: 1rem;
+    letter-spacing: .08rem;
+}
+
+.navlist .slider {
+    background-color: rgba(255, 255, 255, 0.345);
+    width: 5rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    right: 391px;
+    border-top: .3rem solid #2c1e1e;
+    border-radius: 0 0 2rem 2rem;
+    backdrop-filter: blur(.5rem);
+    z-index: -1;
+    transition: .5s ease-in-out;
+}
+
+.navlist li:nth-child(2):hover ~ .slider{
+    right: 305px;
+}
+
+.navlist li:nth-child(3):hover ~ .slider{
+    right: 205px;
+}
+
+.navlist li:nth-child(4):hover ~ .slider{
+    right: 97px;
+}
+
+.navlist li:nth-child(5):hover ~ .slider{
+    right: -7px;
+}
+
+.home {
+    display: flex;
+}
+
+.home .left {
+    background: #2c1e1e;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.home .right {
+    background: #7c573c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    height: 68%;
+    padding-left: 3rem;
+}
+
+.left , .right {
+    width: 50%;
+    height: 100vh;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle #circle {
+    height: 8rem;
+    width: 8rem;
+    color: #FBFBFB;
+    border-radius: 8rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.middle #circle:nth-child(1) {
+    background-image: url(Images/powder.jpg);
+    background-size: 300%;
+}
+
+.middle #circle:nth-child(2) {
+    background-image: url(Images/coffeebeans.jpg);
+    margin: 3rem 0;
+}
+
+.middle #circle:nth-child(3) {
+    background-image: url(Images/leaves.jpg);
+}
+
+.middle #circle::before {
+    content: "";
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8rem;
+    border: .25rem dashed #FBFBFB;
+    padding: .4rem;
+}
+
+.left .content {
+    color: #FBFBFB;
+}
+
+.content h1 {
+    font-size: 3rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .04rem #FBFBFB;
+    letter-spacing: .2rem;
+    font-family: "Lemon", cursive;
+}
+
+.content p {
+    color: rgba(255, 255, 255, 0.37);
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    line-height: 2rem;
+}
+
+.content button {
+    background: radial-gradient(at top left, #D39D55, #543A14 );
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: .2rem solid rgba(255, 255, 255, 0.286);
+    color: #FBFBFB;
+    border-radius: 4rem;
+    letter-spacing: .1rem;
+}
+
+.content button:hover {
+    background: radial-gradient(at button right, #D39D55, #543A14 );
+}
+
+.footer {
+    background-color: #3E5879;
+    height: 20rem;
+    width: 100%;
+    border-top: 2px solid #FBFBFB;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    color: #FBFBFB;
+}
+
+.info, .help, .policy, .social {
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+
+.h-3 {
+    padding-left: 2px;
+    list-style: none;
+}
+
+#h3 {
+    color: #fbfbfb;
+}
+
+#a {
+    text-decoration: none;
+    color: #fbfbfb7b;
+}
+
+#a:hover {
+    border-bottom: 1.5px solid #FBFBFB;
+    color: #D39D55;
+}
+
+#social {
+    text-decoration: none;
+}
+
+#social i{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FBFBFB;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#social i:hover {
+    color: #D39D55;
+}
